@@ -1,12 +1,181 @@
 <!DOCTYPE html>
-<html>
-<body>
-<!-- Background -->
-    <div class="header-background theme-bg--primary"></div>
-    <div class="header-display-desktop" data-content-field="site-title">
-<h1>I's a h1 header.</h1>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nikki Chen | Portfolio</title>
+  <style>
+    :root {
+      --bg-color: #f4f4f9;
+      --accent-color: #5e60ce;
+      --text-color: #333;
+      --heading-font: 'Georgia', serif;
+      --body-font: 'Helvetica Neue', sans-serif;
+    }
 
-<p>It's a paragraph.</p>
+    body {
+      margin: 0;
+      font-family: var(--body-font);
+      background: var(--bg-color);
+      color: var(--text-color);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: var(--accent-color);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    nav {
+      background: white;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: var(--accent-color);
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    h2 {
+      font-family: var(--heading-font);
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+
+    .videos iframe {
+      width: 100%;
+      height: 400px;
+      margin-bottom: 1rem;
+      border: none;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact input, .contact textarea {
+      padding: 0.7rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .contact button {
+      padding: 0.7rem;
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .contact button:hover {
+      background-color: #4e50b5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #e9e9f3;
+    }
+
+    .social-links a {
+      margin: 0 0.5rem;
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .resume a {
+      display: inline-block;
+      margin-top: 1rem;
+      color: white;
+      background: var(--accent-color);
+      padding: 0.6rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .resume a:hover {
+      background: #4e50b5;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Nikki Chen</h1>
+  <p>Actor • Storyteller • Creative Soul</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#videos">Videos</a>
+  <a href="#resume">Resume</a>
+  <a href="#contact">Contact</a>
+  <a href="#social">Social</a>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>Hello! I'm Nikki Chen — an actor, performer, and passionate creator. I thrive on telling powerful stories, whether on stage, on camera, or through my personal writing. My portfolio spans across film, stage, and digital media. Let's create something extraordinary together.</p>
+</section>
+
+<section id="videos" class="videos">
+  <h2>Videos</h2>
+  <p>Here are a few featured works:</p>
+  <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Demo Video 1" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/oHg5SJYRHA0" title="Demo Video 2" allowfullscreen></iframe>
+</section>
+
+<section id="resume" class="resume">
+  <h2>Resume</h2>
+  <p>Download my resume in PDF format below:</p>
+  <a href="resume.pdf" download>Download Resume</a>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact Me</h2>
+  <form action="mailto:your.email@example.com" method="POST" enctype="text/plain">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<section id="social" class="social-links">
+  <h2>Connect with Me</h2>
+  <p>
+    <a href="https://www.instagram.com/yourprofile" target="_blank">Instagram</a> |
+    <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
+    <a href="https://www.youtube.com/@yourchannel" target="_blank">YouTube</a>
+  </p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Nikki Chen. All rights reserved.</p>
+</footer>
 
 </body>
 </html>

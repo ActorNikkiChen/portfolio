@@ -1,0 +1,138 @@
+    /* 全局样式 */
+
+    :root {
+      --bg-color: #f4f4f9;
+      --accent-color: #0b98e3;
+      --text-color: #333;
+      --heading-font: 'Georgia', serif;
+      --body-font: 'Helvetica Neue', sans-serif;
+    }
+
+    nav {
+      background-color: white; /* 设置导航栏背景色 */
+      position: sticky;
+      top: 0;/* 固定导航栏在页面顶部 */
+      justify-content: center;/* 水平居中导航链接 */
+      height: 25px;
+      width: 100%;
+      display: flex; /* 使用flex布局 */
+      align-items: center; /* 垂直居中导航链接 */
+      font-family: var(--body-font); /* 使用全局字体 */
+      font-weight: bold; /* 设置字体粗细 */
+      align-items: center; /* 垂直居中导航链接 */
+      margin: 0; /* 去除默认外边距 */
+      padding: 0; /* 去除默认内边距 */
+      z-index: 1000; /* 确保导航栏在页面滚动时保持在顶部 */
+    }
+
+    nav a {
+      margin: 0 1rem; /* 设置导航链接之间的间距 */
+      text-decoration: none;/* 去除下划线 */
+      color: var(--accent-color); /* 使用主题色 */
+      font-family: var(--body-font);/* 使用全局字体 */ 
+      font-size: 1rem; /* 设置字体大小 */
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+     section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 0 0;
+    }
+    .main-picture {
+      background: url('images/main-picture.jpg') no-repeat;/* 设置背景图片 */
+      background-size: cover;/* 背景图片覆盖整个区域 */
+      height: 40vh; /* 设置全屏高度 */
+      width: 100vw; /* 设置全屏宽度 */
+      position: relative; /* 相对定位以便于绝对定位子元素 */
+      display: flex; /* 使用flex布局 */
+      justify-content: left; /* 水平居中内容 */
+      align-items: center; /* 垂直居中内容 */
+      z-index: -1; /* 确保背景在其他内容下方 */
+    }
+
+    .text-on-main-picture {
+      position: absolute; /* 绝对定位以覆盖背景图片 */
+      top: 40%; /* 垂直居中 */
+      padding-left: 20px;
+      text-align: left;
+    }
+
+    /* 主要内容区域 */
+    body {
+      margin: 50;
+      font-family: var(--body-font);
+      background: var(--bg-color);
+      color: var(--text-color);
+      scroll-behavior: smooth;
+    }
+
+
+    h2 {
+      font-family: var(--heading-font);
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+
+    .videos iframe {
+      width: 100%;
+      height: 400px;
+      margin-bottom: 1rem;
+      border: none;
+    }
+    .social-links a {
+      margin: 0 0.5rem;
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .resume a {
+      display: inline-block;
+      margin-top: 1rem;
+      color: white;
+      background: var(--accent-color);
+      padding: 0.6rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .resume a:hover {
+      background: #4e50b5;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact input, .contact textarea {
+      padding: 0.7rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .contact button {
+      padding: 0.7rem;
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .contact button:hover {
+      background-color: #4e50b5;
+    }
+    /* 页脚区域 */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #e9e9f3;
+    }
+
+    

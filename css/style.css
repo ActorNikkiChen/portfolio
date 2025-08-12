@@ -1,0 +1,127 @@
+
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+/* Universal Styles */
+:root {
+  --bg: #fff9f4;
+  --text: hsla(227, 90%, 41%, 0.796);
+  --accent:  rgb(10, 191, 208); /* Peachy-pink */
+  --highlight: #1d027eef; /* Soft purple */
+  --nav-bg: #ffffff;
+  --button-bg: #7e6bc1;
+  --button-text: #ffffff;
+}
+
+/*主页的渐变背景*/
+body.homepage {
+  background: linear-gradient(-45deg, rgb(10, 191, 208), #f0eaff, #fff9f4, #fdf3e7);
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 标题样式 Headings */
+h1 {
+  color: var(--highlight);
+  margin-left: 20px;
+  font-size: 2rem;
+}
+
+h1.hero-name {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  color: var(--highlight);
+}
+
+h2 {
+  color: var(--highlight);
+  margin-left: 20px;
+  font-size: 1.5rem;
+}
+
+section {
+    max-width: 1000px;
+    margin: 10px;
+    padding: 0 0;
+    background-color: #ffffff;
+}
+
+.main-picture {
+    max-width: 1000px;
+    margin: 10px;
+    padding: 0 0;
+    height: auto;
+    display: cover;
+    text-align: center;
+}
+
+.main-picture img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.about {
+  text-align: center;
+  margin-top: 60px;
+}
+
+/* 页面布局Page Layout */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  padding-top: 80px;
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* Buttons */
+button, form input[type="submit"] {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #6b5ba7;
+}
+
+
+/* 页脚区域 */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #e9e9f3;
+}   

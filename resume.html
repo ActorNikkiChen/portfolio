@@ -1,15 +1,28 @@
 <!doctype ="html">
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resume | Nikki Chen</title>
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <section class="resume-download">
-    <a href="resume.pdf">Download resume.pdf</a>
-  </section>
+  <div id="nav-placeholder"></div>
+    <script>
+        fetch('nav.html')                      // 1. Ask the browser to go fetch the file 'nav.html'
+        .then(res => res.text())             // 2. When the file is received, convert it from a stream into plain text (HTML code)
+        .then(data => {                      // 3. When the text is ready,
+        document.getElementById('nav-placeholder').innerHTML = data;
+        });                                  // 4. Insert that HTML into the placeholder div
+    </script>
+  <!--
+  <nav>
+      <a href="resume.html">Resume</a>
+      <a href="reels.html">Reels</a>
+      <a href="bts.html">BTS</a>
+      <a href="connect.html">Connect</a>
+      <a url="https://www.instagram.com/yourprofile">Follow Her Insta</a>
+  </nav>
+     -->
 
   <div class="resume-content">
     <h2>TVs/Films</h2>
@@ -144,5 +157,9 @@
       <li><strong>Swim | Yoga | Ice Skating | Roller Skating</strong></li>
       <li><strong>Mandarin | Cantanese | Japanese | Thai</li>
     </ul>
+
+  <section class="resume-download">
+    <a href="resume.pdf">Download resume.pdf</a>
+  </section>
 </body>
 </html>

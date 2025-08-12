@@ -4,35 +4,46 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nikki Chen | Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/navigator.css"/>
+  <link rel="stylesheet" href="css/gallery.css"/>
+  <link rel="stylesheet" href="css/reels.css"/>
 </head>
-<body>
+<body class="homepage">
   <nav>
-      <a href="resume.html">Resume</a>
-      <a href="reels.html">Reels</a>
-      <a href="bts.html">BTS</a>
-      <a href="connect.html">Connect</a>
-      <a href="https://www.instagram.com/yourprofile" >Follow Her Insta</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="reels.html">Reels</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </nav>
 
   <section class="main-picture">
-    <div class="text-on-main-picture">
-      <h1>Nikki Chen</h1>
-      <p>SAG-AFTRA Actor<br>Content Creator</p>
-    </div>
+    <h1 class="hero-name">Nikki Chen</h1>
+    <img src="assets/images/main-picture.jpg" alt="Nikki Chen" class="hero-image" />
   </section>
 
   <section id="about">
-    <h2>About Me</h2>
+    <h1>Let's cut to the chase, </h1>
+    <h2>watch my reels instead.</h2>
   </section>
 
-  <section id="reels" class="videos" style="padding: 10px;">
+  <section id="reels" class="video-container" width="100%" height="100%">
     <h2>Drama Reels - General (3 clips:)</h2>
-    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Demo Reel 1" allowfullscreen></iframe>
+    <iframe
+      src="https://www.youtube.com/embed/0_vXUnA3WrU"
+      title="Demo Reel 1"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
   </section>
 
   <footer>
     <p>&copy; 2025 Nikki Chen. All rights reserved.</p>
   </footer>
+
 </body>
 </html>

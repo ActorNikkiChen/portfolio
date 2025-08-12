@@ -1,0 +1,25 @@
+ /* Resume Link */
+a.resume-link {
+  color: var(--accent);
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a.resume-link:hover {
+  color: var(--highlight);
+}
+ 
+ .resume-download a {
+      display: inline-block;
+      margin-top: 1rem;
+      color: white;
+      background: var(--accent-color);
+      padding: 0.6rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .resume a:hover {
+      background: #4e50b5;
+    }

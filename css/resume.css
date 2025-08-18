@@ -1,4 +1,25 @@
- /* Resume Link */
+
+.resume-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background: var(--bg);
+  border-radius: 10px;
+}
+.resume-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.resume-table tr,
+.resume-table th,
+.resume-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
 a.resume-link {
   color: var(--accent);
   font-weight: bold;
@@ -10,16 +31,16 @@ a.resume-link:hover {
   color: var(--highlight);
 }
  
- .resume-download a {
-      display: inline-block;
-      margin-top: 1rem;
-      color: white;
-      background: var(--accent-color);
-      padding: 0.6rem 1rem;
-      border-radius: 5px;
-      text-decoration: none;
-    }
+.resume-download a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: white;
+  background: var(--accent-color);
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
 
-    .resume a:hover {
-      background: #4e50b5;
-    }
+.resume a:hover {
+  background: #4e50b5;
+}

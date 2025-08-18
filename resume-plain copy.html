@@ -1,32 +1,19 @@
-<!doctype ="html">
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resume | Nikki Chen</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/navigator.css"/>
+  <link rel="stylesheet" href="css/resume.css"/>
+  <script src="js/script.js"></script>
 </head>
 <body>
-  <div id="nav-placeholder"></div>
-    <script>
-        fetch('nav.html')                      // 1. Ask the browser to go fetch the file 'nav.html'
-        .then(res => res.text())             // 2. When the file is received, convert it from a stream into plain text (HTML code)
-        .then(data => {                      // 3. When the text is ready,
-        document.getElementById('nav-placeholder').innerHTML = data;
-        });                                  // 4. Insert that HTML into the placeholder div
-    </script>
-  <!--
-  <nav>
-      <a href="resume.html">Resume</a>
-      <a href="reels.html">Reels</a>
-      <a href="bts.html">BTS</a>
-      <a href="connect.html">Connect</a>
-      <a url="https://www.instagram.com/yourprofile">Follow Her Insta</a>
-  </nav>
-     -->
+ <div id="nav"></div> <!-- Navigation bar -->
 
-  <div class="resume-content">
+  <div class="resume-container">
     <h2>TVs/Films</h2>
-    <table>
+    <table class="resume-table">
       <tr>
         <th>Projects</th>
         <th>Role type</th>
@@ -58,7 +45,9 @@
         <td>2024</td>
       </tr>
     </table>
+  </div>
 
+  <div class="resume-container">
     <h2>Commercials</h2>
     <table>
       <tr>
@@ -111,7 +100,9 @@
         <td>2021</td>
       </tr>
     </table>
+  </div>
 
+  <div class="resume-container">
      <h2>Student Films</h2>
     <table>
       <tr>
@@ -151,15 +142,26 @@
         <td>2024</td>
       </tr>
     </table>
+  </div>
 
+  <div class="resume-container">
     <h3>Skills</h3>
     <ul>
       <li><strong>Swim | Yoga | Ice Skating | Roller Skating</strong></li>
-      <li><strong>Mandarin | Cantanese | Japanese | Thai</li>
+      <li><strong>Mandarin | Cantanese | Japanese | Thai</strong></li>
     </ul>
+  </div>
 
   <section class="resume-download">
     <a href="resume.pdf">Download resume.pdf</a>
   </section>
+
+  <div id="footer"></div> <!-- Footer section -->
+ 
+ <script>
+  loadHTML("nav", "navigator.html");
+  loadHTML("footer", "footer.html");
+</script>
+
 </body>
 </html>

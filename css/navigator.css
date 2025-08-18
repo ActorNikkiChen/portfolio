@@ -1,32 +1,33 @@
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: var(--nav-bg);
-  border-bottom: 0px solid #eee;
-  padding: 10px 20px;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+.navbar {
+  position: fixed;/* 固定定位 */
+  top: 0;/* 固定在顶部 */
+  width: 100%;/* 宽度100% */
+  background: var(--nav-bg);/* 导航栏背景色 */
+  border-bottom: 0px solid #eee;/* 底部边框 */
+  padding: 10px 20px;/* 内边距 */
+  z-index: 1000;/* 确保导航栏在最上层 */
+  box-shadow: 0 0 0 rgba(0,0,0,0.05);/* 阴影效果 */
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
+.navbar ul {/* 导航栏列表样式 */
+  list-style: none;/* 无列表样式 */
+  display: flex;/* 使用flex布局 */
+  justify-content: center;/* 居中对齐 */
+  gap: 25px;/* 列表项间距 */
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 600;
-  font-size: 1.05rem;
-  transition: all 0.3s ease;
-  padding: 5px 8px;
-  border-radius: 4px;
+.navbar ul li a {/* 导航链接样式 */
+  text-decoration: none;/* 无下划线 */
+  color: var(--text);/* 文本颜色 */
+  font-weight: 600;/* 字体加粗 */
+  font-size: 1.05rem;/* 字体大小 */
+  transition: all 0.3s ease;/* 过渡效果 */
+  padding: 5px 8px;/* 内边距 */
+  border-radius: 4px;/* 圆角边框 */
 }
 
-nav ul li a:hover {
-  background-color: var(--accent);
-  color: white;
+.navbar ul li a:hover {/* 导航链接悬停效果 */
+  background-color: var(--accent);/* 悬停背景色 */
+  color: white;/* 悬停文本颜色 */
+  transform: translateY(-2px);/* 向上移动2px */
 }

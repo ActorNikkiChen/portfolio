@@ -1,0 +1,92 @@
+/* ====== SCROLLING CREDITS ====== */
+.credits-container {
+  position: relative;
+  height: 80vh; /* 80% viewport height */
+  width: 80vw; /* 80% viewport width */
+  background: #000; /* Black background for credits */
+  color: white; /* White text for visibility */
+  display: flex; /* Flexbox for centering content */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center content */
+  overflow: hidden; /* Hide overflow for scrolling effect */
+  margin: 0 auto; /* Center the section */
+}
+
+.credits-content {
+  animation: roll 50s linear infinite;/* 滚动动画 */;
+  bottom: -100%;/* 初始位置在底部 */
+  white-space: pre-line;/* 保持换行 */
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 2rem;/* 行高 */
+  }
+
+.credits-content:hover {
+  animation-play-state: paused;/* 鼠标悬停时暂停动画 */
+}
+
+@keyframes roll { /* 滚动动画 */
+  0% { transform: translateY(50%); }  /* 从中部开始 */
+  100% { transform: translateY(-100%); } /* 从底部到顶部滚动 */
+}
+
+
+
+.credits-content h1 {
+  color: aliceblue;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.credits-text h1 {
+  color: aliceblue;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.credits-details {
+  color: aliceblue;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.credits-image {
+  width: auto;
+  height: 100px;
+  margin-bottom: 10px;
+  }
+
+.credits-block {
+  display: flex;
+  margin-bottom: 20px;
+  max-width: 800px;
+}
+
+.credits-text {
+  flex: 1;
+}
+
+.credits-title {
+  color: aliceblue;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.resume-buttons {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+    margin: 20px auto;
+}
+
+.resume-buttons .col {
+  flex: 1; /* equal width for all buttons */
+  /* 等同于flex-grow:1; flex-shrink:1; flex-basis:0; */
+  display: inline-block; /* 使用inline-block布局 */
+  justify-content: center; /* 水平居中 */
+  width: auto; /* 自动宽度 */
+  white-space: nowrap; /* 防止文本换行 */
+}

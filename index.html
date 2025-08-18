@@ -8,42 +8,37 @@
   <link rel="stylesheet" href="css/navigator.css"/>
   <link rel="stylesheet" href="css/gallery.css"/>
   <link rel="stylesheet" href="css/reels.css"/>
+  <script src="js/script.js"></script>
 </head>
 <body class="homepage">
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="reels.html">Reels</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <div id="nav"></div> <!-- Navigation bar -->
 
   <section class="main-picture">
-    <h1 class="hero-name">Nikki Chen</h1>
     <img src="assets/images/main-picture.jpg" alt="Nikki Chen" class="hero-image" />
+    <h1 class="hero-name">Nikki Chen</h1>
+    <params>
+      <p class="hero-description">SAG-AFTRA | NYC
+      <br>English | Mandarin | Fujian Dialect | Japanese |Thai</p>
+    </params>
   </section>
 
-  <section id="about">
-    <h1>Let's cut to the chase, </h1>
-    <h2>watch my reels instead.</h2>
-  </section>
-
-  <section id="reels" class="video-container" width="100%" height="100%">
+  <section id="reels" class="video-container" max-width="100vw" height="100px">
     <h2>Drama Reels - General (3 clips:)</h2>
     <iframe
       src="https://www.youtube.com/embed/0_vXUnA3WrU"
       title="Demo Reel 1"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
+      allowfullscreen max-width="100px">
     </iframe>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Nikki Chen. All rights reserved.</p>
-  </footer>
+<div id="footer"></div> <!-- Footer section -->
 
+<script>
+  loadHTML("nav", "navigator.html");
+  loadHTML("footer", "footer.html");
+</script>
+  
 </body>
 </html>

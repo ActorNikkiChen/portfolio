@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name | Resume</title>
+<style>
+    /* ====== RESET & BASE ====== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+        font-family: 'Lato', sans-serif;
+        color: #222;
+        background: #fdfdfd;
+        line-height: 1.6;
+        scroll-behavior: smooth;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    /* ====== HEADER ====== */
+    header {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%;
+        background: rgba(255,255,255,0.95);
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        padding: 1rem;
+        border-bottom: 1px solid #ddd;
+        z-index: 1000;
+    }
+    header a {
+        font-weight: bold;
+        color: #444;
+    }
+    header a:hover { color: #b40000; }
+
+    /* ====== SECTIONS ====== */
+    section {
+        min-height: 10vh;
+        padding: 1rem 10% 4rem;
+    }
+    section:nth-child(even) { background: #fafafa; }
+    h1, h2 { margin-bottom: 1rem; font-weight: 700; }
+    p { max-width: 700px; margin-bottom: 1rem; }
+
+    /* ====== HERO ====== */
+    #hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    #hero img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+    }
+    .quick-links a {
+        margin: 0 .5rem;
+        padding: .5rem 1rem;
+        border: 1px solid #b40000;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+    }
+    .quick-links a:hover {
+        background: #b40000;
+        color: white;
+    }
+
+    /* ====== EXPERIENCE ====== */
+    .timeline { border-left: 3px solid #b40000; padding-left: 1.5rem; }
+    .timeline-item { margin-bottom: 2rem; }
+    .timeline-item h3 { margin-bottom: 0.2rem; }
+    .timeline-item small { color: #666; }
+
+    /* ====== SCROLLING CREDITS ====== */
+    #credits {
+        background: black;
+        color: white;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .credits-roll {
+        animation: roll 40s linear infinite;
+        white-space: pre-line;
+        text-align: center;
+        font-size: 1.2rem;
+        line-height: 2;
+    }
+    @keyframes roll {
+        0% { transform: translateY(100%); }
+        100% { transform: translateY(-100%); }
+    }
+
+    /* ====== FOOTER ====== */
+    footer {
+        text-align: center;
+        padding: 2rem;
+        font-size: 0.9rem;
+        background: #111;
+        color: #ccc;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <a href="#hero">Home</a>
+    <a href="#highlights">Highlights</a>
+    <a href="#experience">Experience</a>
+    <a href="#training">Training</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+    <a href="#credits">Credits View</a>
+</header>
+
+<section id="hero">
+    <img src="assets/images/headshot1.jpg" alt="Your Name">
+    <h1>Your Name</h1>
+    <p><em>Actor | Storyteller | Creative Spirit</em></p>
+    <div class="quick-links">
+        <a href="mailto:you@example.com">Email</a>
+        <a href="#">IMDb</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+    </div>
+</section>
+
+<section id="highlights">
+    <h2>Highlights</h2>
+    <p><strong>Years Active:</strong> 2016–Present</p>
+    <p><strong>Languages:</strong> English, Mandarin, Thai, Japanese</p>
+    <p><strong>Special Skills:</strong> Stage combat, dance, accents, voiceover</p>
+</section>
+
+<section id="experience">
+    <h2>Experience</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <h3>Lead Role – *The Mystery Show*</h3>
+            <small>2023 | Directed by Jane Doe</small>
+            <p>Played the role of Detective Lee, uncovering a hidden conspiracy in a tense, dramatic thriller.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>Supporting Role – *City Dreams*</h3>
+            <small>2021 | Produced by XYZ Films</small>
+            <p>Brought warmth and humor to the character of Mei, a loyal best friend navigating love and career in a bustling city.</p>
+        </div>
+    </div>
+</section>
+
+<section id="training">
+    <h2>Training & Education</h2>
+    <p><strong>ABC Acting Studio</strong> – Advanced Scene Study</p>
+    <p><strong>XYZ University</strong> – BA in Performing Arts</p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <p>Stage Combat • Dance • Accents • Voiceover • Improvisation • Multilingual Performance</p>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+    <p>Download: <a href="resume.pdf" target="_blank">PDF Resume</a></p>
+</section>
+
+<!-- MOVIE-STYLE CREDITS -->
+<section id="credits">
+    <div class="credits-roll">
+        <h1>TV/Film</h1>
+        <h2>Starring</h2>
+        Your Name
+        
+        <h2>Film & TV</h2>
+        The Mystery Show – Lead Role – 2023
+        City Dreams – Supporting Role – 2021
+        
+        <h2>Theatre</h2>
+        Romeo & Juliet – Juliet – 2019
+        Hamlet – Ophelia – 2018
+        
+        <h2>Training</h2>
+        ABC Acting Studio – Advanced Scene Study
+        XYZ University – BA Performing Arts
+        
+        <h2>Special Thanks</h2>
+        Family, Friends, Mentors
+        
+        <h2>Contact</h2>
+        you@example.com | IMDb | Instagram
+    </div>
+</section>
+
+<footer>
+    &copy; 2025 Your Name | All Rights Reserved
+</footer>
+
+</body>
+</html>

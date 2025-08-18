@@ -1,13 +1,13 @@
-/*以下是Polaroid的样式*/
-.polaroid-gallery {
+/*以下是拍立得样式*/
+.polaroid-gallery { /* 拍立得相册容器 */
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
-.polaroid {
+.polaroid { /* 拍立得样式 */
   background-color: #fff;
   border: 1px solid #ccc;
   border-bottom: 30px solid #fff;
@@ -21,12 +21,12 @@
   position: relative;
 }
 
-.polaroid img {
+.polaroid img { /* 拍立得图片样式 */
   width: 100%;
   border-radius: 4px;
 }
 
-.polaroid p {
+.polaroid p { /* 拍立得文字样式 */
   margin-top: 8px;
   font-size: 0.9rem;
   font-weight: 600;
@@ -34,18 +34,103 @@
   font-style: italic;
 }
 
+.masonry-gallery { /* 瀑布流布局 */
+  column-count: 3; /* 设置列数 */
+  column-gap: 10px; /* 列间距 */
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 10px;
+}
+
+.masonry-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
 /* Hover effect */
-.polaroid:hover {
+.polaroid:hover { /* 鼠标悬停效果 */
   transform: scale(1.05) rotate(0deg);
   box-shadow: 8px 12px 25px rgba(0, 0, 0, 0.2);
   z-index: 2;
 }
 /*以上是Polaroid的样式*/
 
-/* 以下是Flip Card的样式 */
-.about-section {
-  text-align: center;
-  margin-top: 60px;
+.gallery-lightbox { /* 画廊灯箱样式 */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.gallery-lightbox img {
+  width: 100%;
+  transition: 0.3s;
+}
+.gallery-lightbox img:hover {
+  transform: scale(1.1);
+}
+
+.gallery-carousel { /* 画廊轮播样式 */
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 20px;
+}
+
+.gallery-carousel img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.gallery-justified { /* 画廊对齐样式 */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.gallery-justified img {
+  height: 150px;
+  width: auto;
+}
+
+.gallery-hover {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.gallery-hover .item{
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.gallery-hover .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-hover .item:hover .overlay {
+  opacity: 1;
+}
+
+.gallery-hover img {
+  width: 100%;
+  border-radius: 8px;
 }
 
 .flip-card {
@@ -126,13 +211,13 @@
 
 
 /* Gallery */
-.gallery-grid {
+.gallery-grid-basic { /* 相册网格布局 */
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
 }
 
-.gallery-grid img {
+.gallery-grid-basic img {
   width: 100%;
   border-radius: 8px;
 }
@@ -140,7 +225,7 @@
 /* Gallery */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
 }
 

@@ -15,10 +15,20 @@
 }
 
 /*主页的渐变背景*/
-body.homepage {
+body.homepage, body.reelspage, body.gallerypage, body.resumepage, body.contactpage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
   background: linear-gradient(-45deg, rgb(10, 191, 208), #f0eaff, #fff9f4, #fdf3e7);
   background-size: 400% 400%;
   animation: gradientFlow 15s ease infinite;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  flex: 1; /* 让主内容区域扩展以填充剩余空间 */
 }
 
 @keyframes gradientFlow {
@@ -121,6 +131,6 @@ button:hover {
 /* 页脚区域 */
 footer {
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 1rem 0;
     background-color: #e9e9f3;
 }   

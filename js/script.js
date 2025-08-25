@@ -19,3 +19,12 @@ function loadHTML(id, file) {
     });
 }
 
+function showSideNavbar() {
+  const sideNavbar = document.querySelector('.side-navbar');
+  sideNavbar.style.display = 'flex';
+}
+
+function hideSideNavbar() {
+  const sideNavbar = document.querySelector('.side-navbar');
+  sideNavbar.style.display = 'none';
+}

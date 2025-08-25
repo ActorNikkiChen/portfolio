@@ -1,4 +1,9 @@
-.navbar {
+*{
+  margin: 0;/* 清除默认外边距 */
+  padding: 0;/* 清除默认内边距 */
+}
+
+nav {
   position: fixed;/* 固定定位 */
   top: 0;/* 固定在顶部 */
   width: 100%;/* 宽度100% */
@@ -7,27 +12,85 @@
   padding: 10px 20px;/* 内边距 */
   z-index: 1000;/* 确保导航栏在最上层 */
   box-shadow: 0 0 0 rgba(0,0,0,0.05);/* 阴影效果 */
+  backdrop-filter: blur(50px);/* 背景模糊效果 */
 }
 
-.navbar ul {/* 导航栏列表样式 */
+nav ul{/* 导航栏列表样式 */
   list-style: none;/* 无列表样式 */
   display: flex;/* 使用flex布局 */
-  justify-content: center;/* 居中对齐 */
-  gap: 25px;/* 列表项间距 */
+  justify-content: flex-end;/* 右对齐 */
+  align-items: center;/* 垂直居中 */
+  gap: 20px;/* 列表项间距 */
 }
 
-.navbar ul li a {/* 导航链接样式 */
+nav li {/* 导航列表项样式 */
+  height: 25px;
+  display: inline;/* 行内显示 */
+}
+
+nav a {/* 导航链接样式 */
+  height: 100%;/* 高度100% */
   text-decoration: none;/* 无下划线 */
   color: var(--text);/* 文本颜色 */
   font-weight: 600;/* 字体加粗 */
-  font-size: 1.05rem;/* 字体大小 */
-  transition: all 0.3s ease;/* 过渡效果 */
-  padding: 5px 8px;/* 内边距 */
+  font-size: 1rem;/* 字体大小 */
+  padding: 0px 10px;/* 内边距 */
   border-radius: 4px;/* 圆角边框 */
+  align-items: center;/* 垂直居中 */
+  display: flex;/* 使用flex布局 */
 }
 
-.navbar ul li a:hover {/* 导航链接悬停效果 */
-  background-color: var(--accent);/* 悬停背景色 */
-  color: white;/* 悬停文本颜色 */
-  transform: translateY(-2px);/* 向上移动2px */
+nav a:hover {/* 鼠标悬停效果 */
+  background: var(--accent);/* 背景色变化 */
+  color: var(--text-highlight);/* 文本颜色变化 */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);/* 阴影效果 */
+  transition: all 0.3s ease;/* 过渡效果 */
+}
+
+.side-navbar {
+  position: fixed;/* 固定定位 */
+  top: 0;/* 固定在顶部 */
+  right: 0;/* 固定在右侧 */
+  width: 100px;
+  height: 100vh; 
+  display: none;
+  flex-direction: column;/* 垂直排列 */
+  align-items: flex-start;/* 左对齐 */
+  justify-content: flex-start;/* 顶部对齐 */
+  gap: 10px;/* 列表项间距 */
+  background: #fffcfcc1;/* 导航栏背景色 */
+  backdrop-filter: blur(10px);/* 背景模糊效果 */
+  border-left: 0px solid #eee;/* 左侧边框 */
+  padding: 10px 10px;/* 内边距 */
+  z-index: 1000;/* 确保导航栏在最上层 */
+  box-shadow: 0 0 0 rgba(0,0,0,0.05);/* 阴影效果 */
+}
+
+.side-navbar li {
+  width: 100%;
+  height: 25px;
+  display: inline;/* 行内显示 */
+}
+
+.side-navbar a {
+  width: 100%;
+}
+
+  .menuButton {
+    display: none;
+  }
+
+@media (max-width: 500px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .menuButton {
+    display: block;
+  }
+}
+
+@media (max-width: 400px) {
+  .side-navbar {
+    width: 100vw;
+  }
 }
